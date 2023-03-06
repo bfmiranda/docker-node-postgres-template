@@ -17,6 +17,7 @@ app.get("/employees", async (req, res) => {
   const results = await client
     .query("SELECT * FROM employees")
     .then((payload) => {
+      console.log(payload.rows);
       return payload.rows;
     })
     .catch(() => {
@@ -29,7 +30,8 @@ app.get("/employees", async (req, res) => {
 
 (async () => {
   await client.connect();
-
+  console.log("Connected to database");
+  
   app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
   });
