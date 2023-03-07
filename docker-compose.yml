@@ -47,8 +47,8 @@ services:
   pgadmin-compose:
     image: dpage/pgadmin4
     environment:
-      PGADMIN_DEFAULT_EMAIL: "placeholder@example.com"
-      PGADMIN_DEFAULT_PASSWORD: "fakepassword123!"
+      PGADMIN_DEFAULT_EMAIL: "123@bruno.com"
+      PGADMIN_DEFAULT_PASSWORD: "fake123!"
     ports:
       - "16543:80"
     depends_on:

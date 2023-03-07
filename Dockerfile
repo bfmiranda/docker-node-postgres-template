@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 # copying packages first helps take advantage of docker layers
 COPY package*.json ./
-COPY database-seed.sql ./   
+# COPY database-seed.sql ./   
 
 RUN npm install
 # If you are building your code for production
